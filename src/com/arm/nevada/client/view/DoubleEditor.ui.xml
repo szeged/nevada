@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<ui:with field="res"
+		type="com.arm.nevada.client.view.design.ResourceBundle" />
+	<g:HTMLPanel stylePrimaryName="{res.style.doubleWordEdit}" width="100%">
+		<g:TextBox ui:field="doubleTextBox" addStyleNames="{res.style.numberInputTextBox}" width="100%" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

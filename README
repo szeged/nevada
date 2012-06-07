@@ -1,0 +1,54 @@
+Copyright (C) 2011, 2012 University of Szeged
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY UNIVERSITY OF SZEGED ``AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL UNIVERSITY OF SZEGED OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*************************************
+
+NEVADA The ARM-NEON Visualization Tool
+
+SIMD (Single Instruction Multiple Data) instruction sets are getting more and
+more widespread even in the embedded world as they offer increased computation
+power. However, to efficiently use such instruction sets some experience is
+needed. It is essential to try and observe the exact behaviour of small SIMD
+code snippets to get that experience. Setting up the necessary environment can
+be difficult, especially for newcomers, thus tools visualizing the execution of
+such short snippets can greatly accelerate the learning phase.
+   In cooperation with ARM we created a visualizing tool called NEVADA which
+enables observing the execution of NEON instructions which is the SIMD extension
+of the industry leading ARM architecture in the embedded domain. Since NEVADA
+runs inside a web browser, anyone and anywhere can try NEON code without setting
+up any environment.
+
+NEVADA has the following key features:
+ * Allows observation of NEON instruction sequences by interpreting them
+   step-by-step or continuously.
+ * The register and memory content can be displayed in various formats
+   (decimal, hexadecimal or float) and data sizes.
+ * The effect of the instructions on the registers are highlighted by
+   colors for a better understanding
+ * It can save and load the whole machine state. The state also can be
+   encoded inside a URL. This feature is excellent for creating learning
+   materials.
+
+NEVADA is a free and open source tool, for more information about how to get
+it, see https://github.com/loki04/nevada.

@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style >
+		.registerContainer {
+			width: 100%;
+		}
+	</ui:style>
+	<ui:with field="res"
+		type="com.arm.nevada.client.view.design.ResourceBundle" />
+	<g:HTMLPanel width="100%" stylePrimaryName="{res.style.singleWordEdit}">
+		<g:DeckPanel width="100%" ui:field="deckTypeSelector">
+			<g:HorizontalPanel addStyleNames="{style.registerContainer}" >
+				<g:TextBox ui:field="edit8_3" addStyleNames="{res.style.numberInputTextBox}"/>
+				<g:TextBox ui:field="edit8_2" addStyleNames="{res.style.numberInputTextBox}" />
+				<g:TextBox ui:field="edit8_1" addStyleNames="{res.style.numberInputTextBox}" />
+				<g:TextBox ui:field="edit8_0" addStyleNames="{res.style.numberInputTextBox}" />
+			</g:HorizontalPanel>
+
+			<g:HorizontalPanel addStyleNames="{style.registerContainer}" >
+				<g:TextBox ui:field="edit16_1" addStyleNames="{res.style.numberInputTextBox}" />
+				<g:TextBox ui:field="edit16_0" addStyleNames="{res.style.numberInputTextBox}" />
+			</g:HorizontalPanel>
+
+			<g:HorizontalPanel addStyleNames="{style.registerContainer}" > 
+				<g:TextBox ui:field="edit32_0" addStyleNames="{res.style.numberInputTextBox}" />
+			</g:HorizontalPanel>
+
+		</g:DeckPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

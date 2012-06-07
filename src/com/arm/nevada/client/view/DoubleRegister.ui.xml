@@ -1,0 +1,34 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.arm.nevada.client.view">
+	<ui:style>
+		.fullWidth {
+			width: 100%;
+		}
+		
+		.higherRegister {
+			border-right: 5px solid lightGray;
+		}
+	</ui:style>
+	<ui:with field="res"
+		type="com.arm.nevada.client.view.design.ResourceBundle" />
+	<g:HTMLPanel width="100%" stylePrimaryName="{res.style.doubleWordEdit}">
+		<g:DeckPanel width="100%" ui:field="selector">
+			<g:HorizontalPanel width="100%">
+				<g:cell width="50%">
+					<g:HTMLPanel addStyleNames="{style.higherRegister}">
+						<c:BasicRegister ui:field="higherRegister" />
+					</g:HTMLPanel>
+				</g:cell>
+				<g:cell width="50%">
+					<g:HTMLPanel>
+						<c:BasicRegister ui:field="lowerRegister" />
+					</g:HTMLPanel>
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:SimplePanel addStyleNames="{style.fullWidth}">
+				<c:DoubleEditor ui:field="doubleEditor" />
+			</g:SimplePanel>
+		</g:DeckPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.arm.nevada.client.view">
+	<ui:style>
+		.fullWidth {
+			width: 100%;
+		}
+	</ui:style>
+	<ui:with field="res"
+		type="com.arm.nevada.client.view.design.ResourceBundle" />
+	<g:HTMLPanel stylePrimaryName="{res.style.memoryElement}" ui:field="container">
+		<table>
+			<tr>
+				<td>
+					<g:Label ui:field="label" addStyleNames="{res.style.indexLabel}">+00..01</g:Label>
+				</td>
+				<td style="width: 100%;">
+					<c:DoubleRegister ui:field="doubleRegister" addStyleNames="{style.fullWidth}" />
+				</td>
+			</tr>
+		</table>
+		<!-- <g:HorizontalPanel ui:field="container"> -->
+		<!-- <g:Label ui:field="label" addStyleNames="{res.style.indexLabel}">+00..01</g:Label> -->
+		<!-- <c:DoubleRegister ui:field="doubleRegister" addStyleNames="{style.fullWidth}"/> -->
+		<!-- </g:HorizontalPanel> -->
+	</g:HTMLPanel>
+</ui:UiBinder> 
