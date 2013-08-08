@@ -709,10 +709,10 @@ public class InstructionFormats {
 			append(new ShiftInstruction(EnumInstruction.vrshrn, EnumRegisterType.QUAD, true), _64.p(), Space.p(), D.p(), Comma.p(), Q.p(), Comma.p(), Imm1toHalfSize.p());
 			
 			//vsli
-			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.DOUBLE, true), AllI.p(), Space.p(), D.p(), Comma.p(), D.p(), Comma.p(), Imm1toSize.p());
-			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.QUAD, true), AllI.p(), Space.p(), Q.p(), Comma.p(), Q.p(), Comma.p(), Imm1toSize.p());
-			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.DOUBLE, true), AllI.p(), Space.p(), D.p(), Comma.p(), Imm1toSize.p());
-			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.QUAD, true), AllI.p(), Space.p(), Q.p(), Comma.p(), Imm1toSize.p());
+			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.DOUBLE, true), AllI.p(), Space.p(), D.p(), Comma.p(), D.p(), Comma.p(), Imm0toSizeMinus1.p());
+			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.QUAD, true), AllI.p(), Space.p(), Q.p(), Comma.p(), Q.p(), Comma.p(), Imm0toSizeMinus1.p());
+			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.DOUBLE, true), AllI.p(), Space.p(), D.p(), Comma.p(), Imm0toSizeMinus1.p());
+			append(new ShiftInstruction(EnumInstruction.vsli, EnumRegisterType.QUAD, true), AllI.p(), Space.p(), Q.p(), Comma.p(), Imm0toSizeMinus1.p());
 			
 			//vsri
 			append(new ShiftInstruction(EnumInstruction.vsri, EnumRegisterType.DOUBLE, true), AllI.p(), Space.p(), D.p(), Comma.p(), D.p(), Comma.p(), Imm1toSize.p());
