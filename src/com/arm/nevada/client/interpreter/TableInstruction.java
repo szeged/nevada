@@ -82,6 +82,7 @@ public class TableInstruction extends Instruction {
 	@Override
 	public void execute(Machine machine) {
 		NEONRegisterSet neonRegSet = machine.getNEONRegisterSet();
+		int[] destination = DataTypeTools.createPartListFromWords(size, neonRegSet.getRegisterValues(registerType, destinationRegisterIndex));
 		int[] indexVector = DataTypeTools.createPartListFromWords(size, neonRegSet.getRegisterValues(registerType, indexVectorIndex));
 		int[] table = new int[tableLengthInRegister * EnumRegisterType.DOUBLE.getSize() / size];
 		for (int listI = 0; listI < tableLengthInRegister; listI++) {
@@ -91,7 +92,7 @@ public class TableInstruction extends Instruction {
 				table[listI * EnumRegisterType.DOUBLE.getSize() / size + subI] = sub[subI];
 			}
 		}
-		int[] resultPartList = calculateTable(indexVector, table);
+		int[] resultPartList = calculateTable(indexVector, table, destination);
 
 		int[] resultWords = DataTypeTools.createWordsFromOnePartPerWord(size, resultPartList);
 		neonRegSet.setRegisterValues(registerType, true, destinationRegisterIndex, resultWords);
@@ -110,15 +111,16 @@ public class TableInstruction extends Instruction {
 	 * @param table
 	 * @return The result as part list.
 	 */
-	private int[] calculateTable(int[] indexVector, int[] table) {
+	private int[] calculateTable(int[] indexVector, int[] table, int[] destination) {
 		int length = table.length;
 		int[] result = new int[indexVector.length];
 		for (int i = 0; i < indexVector.length; i++) {
-			if (indexVector[i] >= length)
+			if (indexVector[i] >= length) {
 				if (overwriteElseNotChange)
 					result[i] = 0;
 				else
-					result[i] = indexVector[i];
+					result[i] = destination[i];
+			}
 			else
 				result[i] = table[indexVector[i]];
 		}
