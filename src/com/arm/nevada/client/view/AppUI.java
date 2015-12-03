@@ -109,7 +109,7 @@ public class AppUI extends Composite implements
 
 	@Override
 	public void onShowHelp(ShowHelpEvent event) {
-		Window.Location.assign("help/manual.html");
+		Window.open("help/manual.html", "_blank", "");
 	}
 
 	@Override
