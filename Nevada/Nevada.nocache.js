@@ -292,11 +292,11 @@ function Nevada(){
   $stats && $stats({moduleName:'Nevada', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['ie9'], '08CD52254369FA04E1E2F173B95DD395');
-      unflattenKeylistIntoAnswers(['ie8'], '2F185F4BF17B25CF5A805F15B45DB590');
-      unflattenKeylistIntoAnswers(['safari'], '435AFB3016883F436278A5B89366149C');
-      unflattenKeylistIntoAnswers(['ie10'], '60853BF02A2F4C1599B7B366EA586665');
-      unflattenKeylistIntoAnswers(['gecko1_8'], 'AA02421DB98DE1ED6194BD547C94AC46');
+      unflattenKeylistIntoAnswers(['gecko1_8'], '084D317E6B0E400A6197BD60CD397DBC');
+      unflattenKeylistIntoAnswers(['ie8'], '5DD791F994975E5CA28148FFD320A8CA');
+      unflattenKeylistIntoAnswers(['safari'], '887D8D773CE04764532AC4138C5B88C7');
+      unflattenKeylistIntoAnswers(['ie9'], 'CDFBF4026875C941B481238F9AD3A11F');
+      unflattenKeylistIntoAnswers(['ie10'], 'DD210952DB167BBC7459F78DC525B678');
       strongName = answers[computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
